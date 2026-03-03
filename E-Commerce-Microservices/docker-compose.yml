@@ -1,0 +1,59 @@
+version: "3.9"
+
+services:
+  postgres:
+    container_name: postgres_container
+    image: postgres:14
+    environment:
+      POSTGRES_DB: ecomdb
+      POSTGRES_USER: chirayu
+      POSTGRES_PASSWORD: chirayu
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5433:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
+
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - "5050:80"
+    networks:
+      - postgres
+    restart: unless-stopped
+    depends_on:
+      - postgres
+
+  # Add this new service for your Spring Boot app
+#  app:
+#    container_name: ecom_app_container
+#    build: .  # Builds from the Dockerfile in the current directory
+#    ports:
+#      - "9090:9090"
+#    networks:
+#      - postgres
+#    depends_on:
+#      - postgres
+#    environment:
+#      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres_container:5432/ecomdb  # Use container name for internal networking
+#      - SPRING_DATASOURCE_USERNAME=chirayu
+#      - SPRING_DATASOURCE_PASSWORD=chirayu
+#    restart: unless-stopped
+
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
+  postgres:
+  pgadmin:

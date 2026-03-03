@@ -1,0 +1,60 @@
+#spring.application.name=ecom-application
+#
+#server.port=9090
+#
+## PostgreSQL Connection Settings
+#spring.datasource.url=jdbc:postgresql://localhost:5432/mydb
+#spring.datasource.username=postgres
+#spring.datasource.password=Chirayu@1911
+#spring.datasource.driver-class-name=org.postgresql.Driver
+#
+## JPA / Hibernate Settings
+#spring.jpa.hibernate.ddl-auto=update
+#
+## PostgreSQL Dialect (Auto-detected in newer Spring Boot versions, but good for clarity)
+#spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+#
+
+server:
+  port: 9090
+  shutdown: GRACEFUL
+
+
+spring:
+  application:
+    name: ecom-application
+
+  datasource:
+      url: jdbc:postgresql://localhost:5433/chirayu
+      username: chirayu
+      password: chirayu
+      driver-class-name: org.postgresql.Driver
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect # Add this here
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,beans
+  endpoint:
+    health:
+      show-details: ALWAYS
+    shutdown:
+      enabled: true
+
+  info:
+    env:
+      enabled: true
+
+info:
+  app:
+    name: ChirayuCart
+    description: App build by me
+    version: 1.0.0
+
