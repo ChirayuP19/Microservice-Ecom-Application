@@ -1,42 +1,28 @@
-2026-02-11T21:26:07.407-05:00  INFO 6524 --- [ConfigServers] [main] c.e.C.ConfigServersApplication           : Starting ConfigServersApplication using Java 25 with PID 6524 (C:\Users\chira\Desktop\JAVA\Microservices Projects\user-workspace\ConfigServers\ConfigServers\target\classes started by chira in C:\Users\chira\Desktop\JAVA\Microservices Projects\user-workspace)
-2026-02-11T21:26:07.414-05:00  INFO 6524 --- [ConfigServers] [main] c.e.C.ConfigServersApplication           : The following 1 profile is active: "native"
-2026-02-11T21:26:09.441-05:00  INFO 6524 --- [ConfigServers] [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
-2026-02-11T21:26:09.453-05:00  INFO 6524 --- [ConfigServers] [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
-2026-02-11T21:26:09.497-05:00  INFO 6524 --- [ConfigServers] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e1fa29db-ed2d-3d9f-a59e-05a9c75d459c
-2026-02-11T21:26:09.958-05:00  INFO 6524 --- [ConfigServers] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8888 (http)
-2026-02-11T21:26:09.973-05:00  INFO 6524 --- [ConfigServers] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-02-11T21:26:09.973-05:00  INFO 6524 --- [ConfigServers] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-02-11T21:26:10.055-05:00  INFO 6524 --- [ConfigServers] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2583 ms
-2026-02-11T21:26:11.303-05:00  INFO 6524 --- [ConfigServers] [main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'ConfigServers.springCloudBusInput' has 1 subscriber(s).
-2026-02-11T21:26:12.149-05:00  INFO 6524 --- [ConfigServers] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 22 endpoints beneath base path '/actuator'
-2026-02-11T21:26:12.297-05:00  INFO 6524 --- [ConfigServers] [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2026-02-11T21:26:12.298-05:00  INFO 6524 --- [ConfigServers] [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'ConfigServers.errorChannel' has 1 subscriber(s).
-2026-02-11T21:26:12.299-05:00  INFO 6524 --- [ConfigServers] [main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
-2026-02-11T21:26:12.323-05:00  INFO 6524 --- [ConfigServers] [main] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: rabbit
-2026-02-11T21:26:12.324-05:00  INFO 6524 --- [ConfigServers] [main] o.s.c.s.binder.DefaultBinderFactory      : Constructing binder child context for rabbit
-2026-02-11T21:26:12.437-05:00  INFO 6524 --- [ConfigServers] [main] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: rabbit
-2026-02-11T21:26:12.455-05:00  INFO 6524 --- [ConfigServers] [main] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: springCloudBus.anonymous.lCyl8gZdTjiWr9wzqeJlwQ, bound to: springCloudBus
-2026-02-11T21:26:12.464-05:00  INFO 6524 --- [ConfigServers] [main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [puffin.rmq2.cloudamqp.com:5672]
-2026-02-11T21:26:13.752-05:00  INFO 6524 --- [ConfigServers] [main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#16f8df70:0/SimpleConnection@7f20dfd5 [delegate=amqp://bkzpqyjq@15.206.140.228:5672/bkzpqyjq, localPort=57266]
-2026-02-11T21:26:14.685-05:00  INFO 6524 --- [ConfigServers] [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'rabbit-770463685.springCloudBusInput.errors' has 1 subscriber(s).
-2026-02-11T21:26:14.686-05:00  INFO 6524 --- [ConfigServers] [main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'rabbit-770463685.springCloudBusInput.errors' has 2 subscriber(s).
-2026-02-11T21:26:15.369-05:00  INFO 6524 --- [ConfigServers] [main] o.s.i.a.i.AmqpInboundChannelAdapter      : started bean 'inbound.springCloudBus.anonymous.lCyl8gZdTjiWr9wzqeJlwQ'
-2026-02-11T21:26:15.383-05:00  INFO 6524 --- [ConfigServers] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8888 (http) with context path '/'
-2026-02-11T21:26:15.425-05:00  INFO 6524 --- [ConfigServers] [main] c.e.C.ConfigServersApplication           : Started ConfigServersApplication in 8.69 seconds (process running for 10.21)
-2026-02-11T21:26:42.076-05:00  INFO 6524 --- [ConfigServers] [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-11T21:26:42.077-05:00  INFO 6524 --- [ConfigServers] [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-02-11T21:26:42.082-05:00  INFO 6524 --- [ConfigServers] [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2026-02-11T21:26:42.255-05:00  INFO 6524 --- [ConfigServers] [http-nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\chira\Desktop\JAVA\Microservices Projects\user-workspace\ConfigServers\ConfigServers\src\main\resources\config\gateway-service.yaml]' via location 'file:///C:\Users\chira\Desktop\JAVA\Microservices Projects\user-workspace\ConfigServers\ConfigServers\src\main\resources\config/'
-2026-02-11T21:26:44.614-05:00  INFO 6524 --- [ConfigServers] [http-nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\chira\Desktop\JAVA\Microservices Projects\user-workspace\ConfigServers\ConfigServers\src\main\resources\config\user-service.yaml]' via location 'file:///C:\Users\chira\Desktop\JAVA\Microservices Projects\user-workspace\ConfigServers\ConfigServers\src\main\resources\config/'
-2026-02-11T21:26:49.167-05:00  INFO 6524 --- [ConfigServers] [http-nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\chira\Desktop\JAVA\Microservices Projects\user-workspace\ConfigServers\ConfigServers\src\main\resources\config\product-service.yml]' via location 'file:///C:\Users\chira\Desktop\JAVA\Microservices Projects\user-workspace\ConfigServers\ConfigServers\src\main\resources\config/'
-2026-02-11T21:26:56.656-05:00  INFO 6524 --- [ConfigServers] [http-nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\chira\Desktop\JAVA\Microservices Projects\user-workspace\ConfigServers\ConfigServers\src\main\resources\config\order-service.yaml]' via location 'file:///C:\Users\chira\Desktop\JAVA\Microservices Projects\user-workspace\ConfigServers\ConfigServers\src\main\resources\config/'
-2026-02-11T22:06:33.472-05:00  INFO 6524 --- [ConfigServers] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-11T22:06:34.670-05:00  INFO 6524 --- [ConfigServers] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
-2026-02-11T22:06:36.107-05:00  INFO 6524 --- [ConfigServers] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
-2026-02-11T22:06:36.143-05:00  INFO 6524 --- [ConfigServers] [SpringApplicationShutdownHook] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
-2026-02-11T22:06:36.288-05:00  INFO 6524 --- [ConfigServers] [SpringApplicationShutdownHook] o.s.i.a.i.AmqpInboundChannelAdapter      : stopped bean 'inbound.springCloudBus.anonymous.lCyl8gZdTjiWr9wzqeJlwQ'
-2026-02-11T22:06:38.259-05:00  INFO 6524 --- [ConfigServers] [SpringApplicationShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'ConfigServers.rabbit-770463685.springCloudBusInput.errors' has 1 subscriber(s).
-2026-02-11T22:06:38.368-05:00  INFO 6524 --- [ConfigServers] [SpringApplicationShutdownHook] o.s.c.stream.binder.BinderErrorChannel   : Channel 'ConfigServers.rabbit-770463685.springCloudBusInput.errors' has 0 subscriber(s).
-2026-02-11T22:06:45.067-05:00  INFO 6524 --- [ConfigServers] [SpringApplicationShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : Removing {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
-2026-02-11T22:06:45.068-05:00  INFO 6524 --- [ConfigServers] [SpringApplicationShutdownHook] o.s.i.channel.PublishSubscribeChannel    : Channel 'ConfigServers.errorChannel' has 0 subscriber(s).
-2026-02-11T22:06:45.079-05:00  INFO 6524 --- [ConfigServers] [SpringApplicationShutdownHook] o.s.i.endpoint.EventDrivenConsumer       : stopped bean '_org.springframework.integration.errorLogger'
+2026-03-04T00:07:54.821-05:00  WARN 26052 --- [ConfigServers] [AMQP Connection 15.206.140.228:5672] c.r.c.impl.ForgivingExceptionHandler     : An unexpected connection driver error occurred (Exception message: Connection reset)
+2026-03-04T00:08:05.209-05:00  WARN 26052 --- [ConfigServers] [springCloudBus.anonymous.EDZiWs8hSVa7VEkCm-ALFA-3] o.s.a.r.l.SimpleMessageListenerContainer : Consumer raised exception, processing can restart if the connection factory supports it
+
+com.rabbitmq.client.ShutdownSignalException: connection error
+	at com.rabbitmq.client.impl.AMQConnection.startShutdown(AMQConnection.java:1014) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.client.impl.AMQConnection.shutdown(AMQConnection.java:1004) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.client.impl.AMQConnection.handleFailure(AMQConnection.java:808) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.client.impl.AMQConnection.access$500(AMQConnection.java:49) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:703) ~[amqp-client-5.27.1.jar:5.27.1]
+	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:316) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:964) ~[na:na]
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:289) ~[na:na]
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:308) ~[na:na]
+	at java.base/java.io.DataInputStream.readUnsignedByte(DataInputStream.java:300) ~[na:na]
+	at com.rabbitmq.client.impl.Frame.readFrom(Frame.java:92) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.client.impl.SocketFrameHandler.readFrame(SocketFrameHandler.java:199) ~[amqp-client-5.27.1.jar:5.27.1]
+	at com.rabbitmq.client.impl.AMQConnection$MainLoop.run(AMQConnection.java:694) ~[amqp-client-5.27.1.jar:5.27.1]
+	... 1 common frames omitted
+
+2026-03-04T00:08:05.591-05:00  INFO 26052 --- [ConfigServers] [springCloudBus.anonymous.EDZiWs8hSVa7VEkCm-ALFA-3] o.s.a.r.l.SimpleMessageListenerContainer : Restarting Consumer@27b5f0: tags=[[amq.ctag-jyXpISQtjC-nCuTORlEiSQ]], channel=Cached Rabbit Channel: AMQChannel(amqp://bkzpqyjq@15.206.140.228:5672/bkzpqyjq,2), conn: Proxy@47f5ab58 Shared Rabbit Connection: SimpleConnection@416e5644 [delegate=amqp://bkzpqyjq@15.206.140.228:5672/bkzpqyjq, localPort=53557], acknowledgeMode=AUTO local queue size=0
+2026-03-04T00:08:06.980-05:00  INFO 26052 --- [ConfigServers] [springCloudBus.anonymous.EDZiWs8hSVa7VEkCm-ALFA-4] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [puffin.rmq2.cloudamqp.com:5672]
+2026-03-04T00:08:08.349-05:00  INFO 26052 --- [ConfigServers] [springCloudBus.anonymous.EDZiWs8hSVa7VEkCm-ALFA-4] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1405aa6a:3/SimpleConnection@4f8de4b0 [delegate=amqp://bkzpqyjq@15.206.140.228:5672/bkzpqyjq, localPort=51344]
+2026-03-04T00:08:08.692-05:00  INFO 26052 --- [ConfigServers] [springCloudBus.anonymous.EDZiWs8hSVa7VEkCm-ALFA-4] o.s.amqp.rabbit.core.RabbitAdmin         : Auto-declaring a non-durable, auto-delete, or exclusive Queue (springCloudBus.anonymous.EDZiWs8hSVa7VEkCm-ALFA) durable:false, auto-delete:true, exclusive:true. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.

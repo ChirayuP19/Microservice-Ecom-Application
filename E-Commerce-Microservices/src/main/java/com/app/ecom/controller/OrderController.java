@@ -1,8 +1,6 @@
 package com.app.ecom.controller;
 
 import com.app.ecom.dto.OrderResponse;
-import com.app.ecom.entity.Order;
-import com.app.ecom.entity.OrderItem;
 import com.app.ecom.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -11,8 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/v1/orders")
