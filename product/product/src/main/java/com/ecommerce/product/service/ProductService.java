@@ -7,7 +7,6 @@ import com.ecommerce.product.entity.Product;
 import com.ecommerce.product.mapper.ProductMapper;
 import com.ecommerce.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
-import org.jspecify.annotations.Nullable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
