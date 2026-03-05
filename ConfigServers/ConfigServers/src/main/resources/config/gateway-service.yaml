@@ -66,6 +66,7 @@ resilience4j:
         automaticTransitionFromOpenToHalfOpenEnabled: true
         slidingWindowType: count_based
 
+
         
 
 

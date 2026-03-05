@@ -56,3 +56,8 @@ logging:
     rollingpolicy:
       max-file-size: 5MB
       max-history: 7
+springdoc:
+  api-doc:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html

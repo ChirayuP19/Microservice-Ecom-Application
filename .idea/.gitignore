@@ -1,4 +1,29 @@
-# Default ignored files
+# IntelliJ
+.idea/
 /shelf/
 /workspace.xml
+*.iml
+*.iws
+*.ipr
 
+# Build files
+**/target/
+
+# Log files
+logs/
+*.log
+
+# MinIO auto-generated data
+additional/evaluate-prometheus/.data/
+
+# Environment files
+.env
+
+# Maven
+**/mvnw
+**/mvnw.cmd
+**/.mvn/
+
+# OS files
+.DS_Store
+Thumbs.db

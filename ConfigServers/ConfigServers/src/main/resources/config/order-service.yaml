@@ -65,19 +65,6 @@ management:
     sampling:
       probability: 1.0
 
-
-#  datasource:
-#    url: jdbc:h2:file:C:/Users/chira/test;AUTO_SERVER=TRUE # in-memory default DB
-#    driver-class-name: org.h2.Driver
-#    username: sa
-#    password:
-#  jpa:
-#      hibernate:
-#        ddl-auto: update            # auto-create/update tables               # show SQL in console
-#  h2:
-#      console:
-#        enabled: true               # enable H2 web console
-#        path: /h2-console           # access at http://localhost:8080/h2-console
 eureka:
   client:
     service-url:
@@ -93,8 +80,6 @@ logging:
     rollingpolicy:
       max-file-size: 5MB
       max-history: 7
-# circuit Breaker
-
 resilience4j:
   circuitbreaker:
     instances:
@@ -118,6 +103,12 @@ resilience4j:
         timeout-duration: 0
         limit-refresh-period: 4s
         limit-for-period: 2
+
+springdoc:
+  api-doc:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
 
 
 
